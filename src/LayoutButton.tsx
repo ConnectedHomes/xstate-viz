@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 export const StyledLayoutButton = styled.button`
   appearance: none;

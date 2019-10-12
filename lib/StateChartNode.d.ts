@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateNode, State } from 'xstate';
-export declare const StyledStateNodeActions: import("styled-components").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement>>;
+export declare const StyledStateNodeActions: import("styled-components-web").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement>>;
 interface StateChartNodeProps {
     stateNode: StateNode;
     current: State<any, any>;

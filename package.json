@@ -1,6 +1,6 @@
 {
   "name": "@statecharts/xstate-viz",
-  "version": "0.3.0",
+  "version": "0.3.0-hive-1",
   "description": "Visualizer for XState.",
   "main": "lib/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/react-syntax-highlighter": "^10.2.0",
-    "@types/styled-components": "^4.0.3",
+    "@types/styled-components-web": "npm:@types/styled-components@4.0.3",
     "concurrently": "^4.0.1",
     "gh-pages": "^2.0.1",
     "ncp": "^2.0.0",
@@ -44,7 +44,7 @@
     "query-string": "^6.8.1",
     "react-ace": "^6.2.0",
     "react-syntax-highlighter": "^10.3.0",
-    "styled-components": "^4.0.2",
+    "styled-components-web": "npm:styled-components@4.0.2",
     "xstate": "^4.6.7"
   },
   "peerDependencies": {

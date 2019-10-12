@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateNode, State, EventObject, Interpreter } from 'xstate';
-export declare const StyledStateChart: import("styled-components").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>;
+export declare const StyledStateChart: import("styled-components-web").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>;
 interface StateChartProps {
     className?: string;
     machine: StateNode<any> | string;

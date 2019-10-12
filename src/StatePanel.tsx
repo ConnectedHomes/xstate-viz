@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { State, Interpreter } from 'xstate';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 const StyledField = styled.div`
   &:not(:last-child) {

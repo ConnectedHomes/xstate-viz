@@ -1,6 +1,6 @@
 import React, { Component, createContext, useState, useReducer } from 'react';
 import { StateChart, notificationsMachine, Notifications } from './index';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { Machine, assign, EventObject, State, Interpreter } from 'xstate';
 import queryString from 'query-string';
 import { useMachine } from '@xstate/react';

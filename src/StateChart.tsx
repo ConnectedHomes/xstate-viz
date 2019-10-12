@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import {
   Machine as _Machine,
   StateNode,

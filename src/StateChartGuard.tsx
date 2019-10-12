@@ -1,6 +1,6 @@
 import React from 'react';
 import { Guard, State } from 'xstate';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 const StyledSCGuard = styled.div`
   padding: 0 0.5rem;
