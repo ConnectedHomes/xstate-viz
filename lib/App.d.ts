@@ -1,6 +1,6 @@
 /// <reference types="styled-components-web" />
 import React from 'react';
-import { EventObject, State, Interpreter } from 'xstate';
+import { EventObject, State, Interpreter, StateMachine } from 'xstate';
 export declare const StyledHeader: import("styled-components-web").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>>;
 export declare const StyledLogo: import("styled-components-web").StyledComponentClass<{
     className?: string | undefined;
@@ -37,5 +37,8 @@ export declare const AppContext: React.Context<{
     send: (event: any) => void;
     service: Interpreter<AppMachineContext, any, EventObject>;
 }>;
-export declare function App(): JSX.Element;
+interface Props {
+    machine: StateMachine<any, any, any>;
+}
+export declare const App: React.SFC<Props>;
 export {};

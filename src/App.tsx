@@ -1,7 +1,7 @@
 import React, { Component, createContext, useState, useReducer } from 'react';
 import { StateChart, notificationsMachine, Notifications } from './index';
 import styled from 'styled-components-web';
-import { Machine, assign, EventObject, State, Interpreter } from 'xstate';
+import { Machine, assign, EventObject, State, Interpreter, StateMachine } from 'xstate';
 import queryString from 'query-string';
 import { useMachine } from '@xstate/react';
 import { log, send } from 'xstate/lib/actions';
@@ -595,8 +595,13 @@ function layoutReducer(state: string, event: string) {
   }
 }
 
-export function App() {
-  const [current, send, service] = useMachine(appMachine);
+interface Props {
+  machine: StateMachine<any, any, any>,
+}
+
+export const App: React.SFC<Props> = ({ machine }) => {
+  const currentMachine = machine ? machine : appMachine;
+  const [current, send, service] = useMachine(currentMachine);
   const [layout, dispatchLayout] = useReducer(
     layoutReducer,
     (query.layout as string) || (!!query.embed ? 'viz' : 'full')
