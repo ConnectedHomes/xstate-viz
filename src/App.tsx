@@ -1,7 +1,7 @@
 import React, { Component, createContext, useState } from 'react';
 import { StateChart, notificationsMachine } from './index';
 import styled from 'styled-components-web';
-import { Machine, assign, EventObject, State, Interpreter } from 'xstate';
+import { Machine, assign, EventObject, State, Interpreter, StateMachine } from 'xstate';
 import queryString from 'query-string';
 import { useMachine } from '@xstate/react';
 import { log, send } from 'xstate/lib/actions';
@@ -416,8 +416,13 @@ export const AppContext = createContext<{
   service: Interpreter<AppMachineContext>;
 }>({ state: appMachine.initialState, send: () => {}, service: {} as any });
 
-export function App() {
-  const [current, send, service] = useMachine(appMachine);
+interface Props {
+  machine: StateMachine<any, any, any>,
+}
+
+export const App: React.SFC<Props> = ({ machine }) => {
+  const currentMachine = machine ? machine : appMachine;
+  const [current, send, service] = useMachine(currentMachine);
 
   if (current.matches({ gist: 'fetching' })) {
     return <div>Loading...</div>;
@@ -439,4 +444,4 @@ export function App() {
       </AppContext.Provider>
     </StyledApp>
   );
-}
+};
