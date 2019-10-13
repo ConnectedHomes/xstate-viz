@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Interpreter, Machine } from 'xstate';
 import { StateChartVisualization } from './StateChartVisualization';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 interface StateChartContainerProps {
   service: Interpreter<any, any>;

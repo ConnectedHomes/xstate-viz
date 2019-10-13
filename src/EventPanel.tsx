@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { EventObject, State, Interpreter, Machine, assign } from 'xstate';
 import AceEditor from 'react-ace';
 import { isBuiltInEvent } from './utils';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { useMachine } from '@xstate/react';
 import { StyledButton } from './Button';
 import { EventRecord } from './StateChart';

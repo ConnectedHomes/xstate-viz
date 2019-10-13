@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from './App';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 const StyledUser = styled.div`
   height: 100%;

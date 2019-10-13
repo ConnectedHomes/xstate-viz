@@ -3,7 +3,7 @@ import AceEditor, { AceEditorProps } from 'react-ace';
 import 'brace/theme/monokai';
 import 'brace/mode/javascript';
 import { StyledButton } from './Button';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { AppContext } from './App';
 
 interface EditorProps extends AceEditorProps {

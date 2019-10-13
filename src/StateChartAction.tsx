@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactPortal } from 'react';
 import { ActionObject, Guard, State, SendActionObject } from 'xstate';
 import { actionTypes } from 'xstate/lib/actions';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { GuardPredicate } from 'xstate';
 import { Popover, StyledPopover } from './Popover';
 import SyntaxHighlighter from 'react-syntax-highlighter';

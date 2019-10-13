@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { getEdges } from 'xstate/lib/graph';
 import { serializeEdge, initialStateNodes } from './utils';
 import { Edge } from './Edge';

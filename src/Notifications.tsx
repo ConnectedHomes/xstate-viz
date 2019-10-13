@@ -4,7 +4,7 @@ import { Actor } from 'xstate/lib/Actor';
 import { produce } from 'immer';
 import { useMachine } from '@xstate/react';
 import { log } from 'xstate/lib/actions';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 
 interface Notification {
   type: 'info' | 'success' | 'warning' | 'error';
