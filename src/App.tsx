@@ -421,8 +421,7 @@ interface Props {
 }
 
 export const App: React.SFC<Props> = ({ machine }) => {
-  const currentMachine = machine ? machine : appMachine;
-  const [current, send, service] = useMachine(currentMachine);
+  const [current, send, service] = useMachine(appMachine);
 
   if (current.matches({ gist: 'fetching' })) {
     return <div>Loading...</div>;
@@ -436,7 +435,7 @@ export const App: React.SFC<Props> = ({ machine }) => {
         <User />
         <Header />
         <StateChart
-          machine={current.context.example}
+          machine={machine}
           onSave={code => {
             send('GIST.SAVE', { code });
           }}
