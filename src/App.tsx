@@ -601,7 +601,7 @@ interface Props {
 
 export const App: React.SFC<Props> = ({ machine }) => {
   const currentMachine = machine ? machine : appMachine;
-  const [current, send, service] = useMachine(currentMachine);
+  const [current, send, service] = useMachine(appMachine);
   const [layout, dispatchLayout] = useReducer(
     layoutReducer,
     (query.layout as string) || (!!query.embed ? 'viz' : 'full')
@@ -618,7 +618,7 @@ export const App: React.SFC<Props> = ({ machine }) => {
         ) : (
           <>
             <StateChart
-              machine={current.context.machine}
+              machine={currentMachine}
               onSave={code => {
                 send('GIST.SAVE', { code });
               }}
