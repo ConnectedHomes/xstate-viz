@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import React from 'react';
 
 export const StyledPopover = styled.aside`

@@ -6,7 +6,7 @@ import {
   DelayedTransitionDefinition,
   Interpreter
 } from 'xstate';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import {
   condToString,
   serializeEdge,

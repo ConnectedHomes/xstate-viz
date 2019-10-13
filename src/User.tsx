@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext, StyledLink } from './App';
-import styled from 'styled-components';
+import styled from 'styled-components-web';
 import { StyledButton } from './Button';
 
 const StyledUserName = styled.div`

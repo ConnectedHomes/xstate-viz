@@ -1,7 +1,7 @@
 import React, { Component, createContext, useState, useReducer } from 'react';
 import { StateChart, notificationsMachine, Notifications } from './index';
-import styled from 'styled-components';
-import { Machine, assign, EventObject, State, Interpreter } from 'xstate';
+import styled from 'styled-components-web';
+import { Machine, assign, EventObject, State, Interpreter, StateMachine } from 'xstate';
 import queryString from 'query-string';
 import { useMachine } from '@xstate/react';
 import { log, send } from 'xstate/lib/actions';
@@ -569,7 +569,12 @@ function layoutReducer(state: string, event: string) {
   }
 }
 
-export function App() {
+interface Props {
+  machine: StateMachine<any, any, any>,
+}
+
+export const App: React.SFC<Props> = ({ machine }) => {
+  const currentMachine = machine ? machine : examples.basic;
   const [current, send, service] = useMachine(appMachine);
   const [layout, dispatchLayout] = useReducer(
     layoutReducer,
@@ -587,7 +592,7 @@ export function App() {
         ) : (
           <>
             <StateChart
-              machine={current.context.machine}
+              machine={currentMachine}
               onSave={code => {
                 send('GIST.SAVE', { code });
               }}
@@ -602,4 +607,4 @@ export function App() {
       </AppContext.Provider>
     </StyledApp>
   );
-}
+};
