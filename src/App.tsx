@@ -600,7 +600,7 @@ interface Props {
 }
 
 export const App: React.SFC<Props> = ({ machine }) => {
-  const currentMachine = machine ? machine : appMachine;
+  const currentMachine = machine ? machine : examples.basic;
   const [current, send, service] = useMachine(appMachine);
   const [layout, dispatchLayout] = useReducer(
     layoutReducer,
