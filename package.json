@@ -1,6 +1,6 @@
 {
   "name": "@statecharts/xstate-viz",
-  "version": "0.3.0-hive-4",
+  "version": "0.3.0-hive-5",
   "description": "Visualizer for XState.",
   "main": "lib/index.js",
   "scripts": {
